@@ -41,7 +41,7 @@
 			getItems(){
 				//console.log()
 				var self = this;
-				//console.log(this.$store.state.homekey);
+//				console.log(this.$store.state.navIsOpen);
 				this.$http.get('https://cnodejs.org/api/v1/topics',{
 					params:{
 						tab:this.$store.state.homekey
@@ -50,6 +50,7 @@
 					//console.log(response)
 					self.items = response.body.data;
 					//console.log(self.items)
+					this.$store.state.navOpen = false;
 				})
 	  		}
 			

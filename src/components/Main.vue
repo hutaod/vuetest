@@ -5,6 +5,7 @@
 		<div id="main">
 			<router-view></router-view>
 		</div>
+		{{changeOpen}}
 	</div>
 </template>
 
@@ -26,10 +27,22 @@
 		},
 	  	methods: {
 	    	toggle (flag) {
-	    		//console.log(flag);
-		      	this.open = !this.open
-		      	this.docked = !flag
+	    		
+	    		this.open = !this.open;
+		      	this.docked = !flag;
+		      	
 	    	}
+	  	},
+	  	computed:{
+	  		changeOpen(){
+	  			this.open = this.$store.state.navIsOpen;
+	  		}
+	  	},
+	  	mounted() {
+	  		//this.open = this.$store.state.navOpen;
+	  		
+	  		//console.log(this.$store.state.navOpen=true);
+	  		//console.log(this.$store.state.navOpen);
 	  	}
 	}
 	

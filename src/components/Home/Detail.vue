@@ -25,13 +25,13 @@
 								</div>
 								<div class="rai-info">
 									{{item.author.loginname}} 发布于 ：{{item.create_at}}
-									<div class="dianzan">
+									<!--<div class="dianzan">
 										<template>
 											<mu-icon value=":fa fa-thumbs-o-up"/>	
 											<span class="">{{item.ups.length}}</span>
 										</template>
 										
-									</div>
+									</div>-->
 								</div>
 							</div>
 							<div v-html="item.content">

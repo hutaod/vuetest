@@ -108,6 +108,7 @@
 	    showList(ky){
 	    	//console.log(this.$store.state.homekey,ky);
 	    	this.$store.commit('setHomeKey',ky)
+	    	this.$store.commit('changeNavIsOpen')
 //	    	this.$emit('showList')
 	    }
 	  },

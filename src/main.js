@@ -17,7 +17,8 @@ const store = new Vuex.Store({
 	state:{
 		lists:null,
 		homekey:'',
-		detailId:''
+		detailId:'',
+		navIsOpen:false
 	},
 	mutations:{
 		setHomeKey(state,hkey){
@@ -30,6 +31,10 @@ const store = new Vuex.Store({
 		},
 		setDetailId(state,did){
 			
+		},
+		changeNavIsOpen(state){
+			state.navIsOpen = true;
+			state.navIsOpen = false;
 		}
 	}
 })
